@@ -1,0 +1,86 @@
+<!-- ملف يتم منه الوراثه واستخدام نفس الكود لتحديد الاسعار وخدمات الحجز-->
+
+<div id="aside" class="col-md-3">
+    <!-- aside Widget -->
+    <div class="aside">
+       <!----> <h3 class="aside-title">فنادق</h3>
+        <div class="checkbox-filter">
+            
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="rooms">عدد الغرف</label>
+                    <input type="number" id="rooms" name="rooms" min="1" value="1">
+                </div>
+
+                <div class="filter-group">
+                    <label for="bathrooms">عدد الحمامات</label>
+                    <input type="number" id="bathrooms" name="bathrooms" min="1" value="1">
+                </div>
+            </div>
+
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="adults">عدد البالغين</label>
+                    <input type="number" id="adults" name="adults" min="1" value="1">
+                </div>
+
+                <div class="filter-group">
+                    <label for="children">عدد الأطفال</label>
+                    <input type="number" id="children" name="children" min="0" value="0">
+                </div>
+            </div> 
+
+            <div class="amenities-filter">
+                <h3 class="aside-title">الخدمات المتاحة</h3>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="amenities" value="wifi"> الواي فاي
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="amenities" value="tv"> التلفاز
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="amenities" value="air_conditioning"> تكييف الهواء
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="amenities" value="room_service"> خدمة الغرف
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="amenities" value="gym"> نادي رياضي قريب
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="amenities" value="pool"> المسبح
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="amenities" value="restaurant"> المطعم
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="amenities" value="parking"> موقف سيارات
+                    </label>
+                </div>
+            </div>
+            
+        </div>
+    </div>  
+    <!-- /aside Widget -->
+
+    <!-- aside Widget -->
+    <div class="aside">
+        <h3 class="aside-title">السعر</h3>
+        <div class="price-filter">
+            <div id="price-slider" class="noUi-target noUi-ltr noUi-horizontal"><div class="noUi-base"><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="1.00" style="z-index: 5;"></div></div><div class="noUi-connect" style="left: 0%; right: 0%;"></div><div class="noUi-origin" style="left: 100%;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="100.0" aria-valuetext="100000.00" style="z-index: 4;"></div></div></div></div>
+            <div class="input-number price-min">
+                <input id="price-min" type="number">
+                <span class="qty-up">+</span>
+                <span class="qty-down">-</span>
+            </div>
+            <span>-</span>
+            <div class="input-number price-max">
+                <input id="price-max" type="number">
+                <span class="qty-up">+</span>
+                <span class="qty-down">-</span>
+            </div>
+        </div>
+    </div>
+    <!-- /aside Widget -->
+</div>
