@@ -1,0 +1,422 @@
+{% extends 'base.html' %}
+{% load static %}
+
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+         {% block title %} E-jari {% endblock title %}
+
+
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    
+        {% block content %}
+		<!-- HEADER -->
+		<header>
+			
+
+			<!-- MAIN HEADER -->
+			<div id="header">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- LOGO -->
+						<div class="col-md-3">
+							<div class="header-logo">
+								<a href="index.html" class="logo">
+									<img src="./img/logoo.png" alt="">
+								</a>
+							</div>
+						</div>
+						<!-- /LOGO -->
+
+						<!-- SEARCH BAR -->
+						<div class="col-md-6">
+							<div class="header-search">
+								<form>
+									<select class="input-select">
+										<option value="0">جميع الأقسام</option>
+										<option value="1">فنادق</option>
+										<option value="1">منتجعات</option>
+										<option value="1">استراحات</option>
+										<option value="1">شقق</option>
+										<option value="1">استوديو</option>
+									</select>
+									<input class="input" placeholder="ابحث هنا">
+									<button class="search-btn">بحث</button>
+								</form>
+							</div>
+						</div>
+						<!-- /SEARCH BAR -->
+
+			<!-- /MAIN HEADER -->
+		</header>
+		<!-- /HEADER -->
+
+		<!-- NAVIGATION -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav" >
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+						<li><a data-toggle="index.html" href="index.html">الرئيسية</a></li>
+						<li class="active"><a  href="hotels.html">فنادق</a></li>
+						<li><a data-toggle="resorts.html" href="resorts.html">منتجعات</a></li>
+						<li><a data-toggle="shalet.html" href="shalet.html">استراحات</a></li>
+						<li><a data-toggle="appartments.html" href="appartments.html">شقق</a></li>
+						<li><a data-toggle="studios.html" href="studios.html">استوديو</a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->
+
+		<!-- BREADCRUMB -->
+        <div id="breadcrumb" class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb-tree">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="hotels.html">فنادق</a></li>
+                            <li class="active"><a href="add.html">جناح رئاسي</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /BREADCRUMB -->
+
+        <!-- SECTION -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- Product main img -->
+                    <div class="col-md-5 col-md-push-2">
+                        <div id="product-main-img">
+                            <div class="product-preview">
+                                <img src="{%static '/img/suit01.jpg'%}" alt="">
+                            </div>
+
+                            <div class="product-preview">
+                                <img src="{%static '/img/suit02.jpg'%}" alt="">
+                            </div>
+
+                            <div class="product-preview">
+                                <img src="{%static '/img/suit03.jpg'%}" alt="">
+                            </div>
+
+                            <div class="product-preview">
+                                <img src="{%static '/img/suit04.jpg'%}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Product main img -->
+
+                    <!-- Product thumb imgs -->
+                    <div class="col-md-2  col-md-pull-5">
+                        <div id="product-imgs">
+                            <div class="product-preview">
+                                <img src="{%static '/img/suit01.jpg'%}" alt="">
+                            </div>
+
+                            <div class="product-preview">
+                                <img src="{%static '/img/suit02.jpg'%}" alt="">
+                            </div>
+
+                            <div class="product-preview">
+                                <img src="{%static '/img/suit03.jpg'%}" alt="">
+                            </div>
+
+                            <div class="product-preview">
+                                <img src="{%static '/img/suit04.jpg'%}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Product thumb imgs -->
+
+                    <!-- Product details -->
+                    <div class="col-md-5">
+                        <div class="product-details">
+                            <h2 class="product-name">جناح رئاسي</h2>
+                            <div>
+                                <div class="product-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <a class="review-link" href="#"> التقييمات</a>
+                            </div>
+                            
+                            <div>
+                                <h3 class="product-price"> دينار في الليلة </h3> <h3 class="product-price"> 500 </h3>
+                            </div>
+                            <p>
+								اكتشف الفخامة المطلقة في جناحنا الرئاسي - تجربة تتخطى التوقعات!
+								
+								استمتع بالإقامة في جناح رئاسي مميز يجمع بين الأناقة الكلاسيكية والحداثة العصرية. يقع جناحنا في قلب المدينة ويوفر إطلالات خلابة على البحر المتوسط، مع مساحة واسعة ومرافق من الدرجة الأولى تلبي جميع احتياجاتك.
+								</p>
+                                <br>
+                                <ul class="product-btns">
+                                    <li><a href="#"><i class="fa fa-heart-o"></i> اضافة إلى المفضلة</a></li>
+                                </ul>                       
+                                <br>
+
+                                <div class="booking-box">
+                                    <div class="price">689$ <span>للليلة</span></div>
+                                    <div class="dates">
+                                        <div class="check-in">
+                                            <label for="check-in-date">تسجيل الوصول</label>
+                                            <input type="text" id="check-in-date" placeholder="اختر تاريخ" readonly>
+                                            <div class="calendar" id="check-in-calendar">
+                                                <div class="calendar-header">
+                                                    <button class="prev-month">&lt;</button>
+                                                    <span class="month">ديسمبر 2024</span>
+                                                    <button class="next-month">&gt;</button>
+                                                </div>
+                                                <div class="calendar-days">
+                                                    <!-- يتم ملء الأيام هنا عبر JavaScript -->
+                                                </div>
+                                            </div>
+                                        </div>
+ 
+                                        <div class="check-out">
+                                            <label for="check-out-date">تسجيل المغادرة</label>
+                                            <input type="text" id="check-out-date" placeholder="اختر تاريخ" readonly>
+                                            <div class="calendar" id="check-out-calendar">
+                                                <div class="calendar-header">
+                                                    <button class="prev-month">&lt;</button>
+                                                    <span class="month">ديسمبر 2024</span>
+                                                    <button class="next-month">&gt;</button>
+                                                </div>
+                                                <div class="calendar-days">
+                                                    <!-- يتم ملء الأيام هنا عبر JavaScript -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-to-cart">
+                                        <button class="add-to-cart-btn"><i class="fa  fa-handshake-o"></i>حـجـز</button>
+                                    </div> 
+                                </div>
+
+
+<br>                        
+							
+				</div>
+                    </div>
+                    <!-- /Product details -->
+
+                    <!-- Product tab -->
+                    <div class="col-md-12">
+                        <div id="product-tab">
+                            <!-- product tab nav -->
+                            <ul class="tab-nav">
+                                <li><a data-toggle="tab" href="#tab3">التقييمات</a></li>
+								<li class="active"><a data-toggle="tab" href="#tab1">الوصف</a></li>
+								<li><a data-toggle="tab" href="#tab2">التفاصيل</a></li>
+
+                            </ul>
+                            <!-- /product tab nav -->
+
+                            <!-- product tab content -->
+                            <div class="tab-content">
+                                <!-- tab1  -->
+                                <div id="tab1" class="tab-pane fade in active">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p>
+												اكتشف الفخامة المطلقة في جناحنا الرئاسي - تجربة تتخطى التوقعات!
+												
+												استمتع بالإقامة في جناح رئاسي مميز يجمع بين الأناقة الكلاسيكية والحداثة العصرية. يقع جناحنا في قلب المدينة ويوفر إطلالات خلابة على البحر المتوسط، مع مساحة واسعة ومرافق من الدرجة الأولى تلبي جميع احتياجاتك.
+												
+												مميزات الجناح الرئاسي:
+												غرفة نوم فاخرة مع سرير بحجم الملك مزود بمفارش فاخرة.
+												صالة خاصة بتصميم عصري تحتوي على منطقة جلوس راقية.
+												حمام رخامي واسع مزود بجاكوزي ودش مطري.
+												شرفة خاصة بإطلالة بانورامية على معالم المدينة والبحر.
+												خدمة كبير الخدم على مدار الساعة لتلبية كافة طلباتك.
+												إمكانية الدخول إلى النادي الصحي والسبا للحصول على تجارب استرخاء استثنائية.
+												لحظات من الفخامة والخصوصية تنتظرك في جناحنا الرئاسي، حيث يتم دمج كل تفاصيل الإقامة مع خدمة استثنائية لضمان الراحة المطلقة. احجز الآن واستمتع بتجربة لا تنسى!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /tab1  -->
+
+                                <!-- tab2  -->
+                                <div id="tab2" class="tab-pane fade in">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p>
+												تفاصيل الجناح الرئاسي:
+												المساحة: 250 مترًا مربعًا
+												عدد الغرف: غرفة نوم رئيسية، صالة معيشة، غرفة طعام خاصة، مكتب عمل
+												الإطلالة: إطلالة بانورامية على البحر والمدينة
+												الطابق: الطابق العلوي من الفندق، لضمان أقصى درجات الخصوصية
+												الديكور: مزيج من التصميم الكلاسيكي والمودرن مع لمسات فنية راقية
+												خدمة الطعام: إمكانية طلب وجبات خاصة من مطبخ الجناح، أو الاستفادة من خدمة الطهاة الشخصيين عند الطلب
+												الوسائل التقنية: تلفاز بشاشة مسطحة 65 بوصة، نظام صوت محيطي، إنترنت فائق السرعة، نظام إضاءة ذكي
+												الراحة والاسترخاء: حمام سبا خاص، جاكوزي، قائمة وسائد مخصصة، ومنتجات استحمام فاخرة
+												الخدمات الإضافية: خدمة النقل الخاص بسيارات فاخرة من وإلى المطار، إمكانية الدخول إلى الصالة التنفيذية</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /tab2  -->
+
+                                <!-- tab3  -->
+                                <div id="tab3" class="tab-pane fade in">
+                                    <div class="row">
+                                        <!-- Rating -->
+                                        <div class="col-md-3">
+                                            <div id="rating">
+                                                <div class="rating-avg">
+                                                    <span>4.5</span>
+                                                    <div class="rating-stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                </div>
+                                                <ul class="rating">
+                                                    
+                                                    
+                                                    <li>
+                                                        <div class="rating-stars">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                        </div>
+                                                        <div class="rating-progress">
+                                                            <div></div>
+                                                        </div>
+                                                        <span class="sum">0</span>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- /Rating -->
+
+                                        <!-- Reviews -->
+                                        <div class="col-md-6">
+                                            <div id="reviews">
+                                                <ul class="reviews">
+                                                    <li>
+                                                        <div class="review-heading">
+                                                            <h5 class="name">صفوان</h5>
+                                                            <p class="date">10-11-2024,  08:00PM</p>
+                                                            <div class="review-rating">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star-o empty"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="review-body">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                                        </div>
+                                                    </li>
+                                                   
+                                                </ul>
+                                                <ul class="reviews-pagination">
+                                                    <li class="active">1</li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- /Reviews -->
+
+                                        <!-- Review Form -->
+                                        <div class="col-md-3">
+                                            <div id="review-form">
+                                                <form class="review-form">
+                                                    <input class="input" type="text" placeholder="اسمك">
+                                                    <input class="input" type="email" placeholder="البريد الالكتروني">
+                                                    <textarea class="input" placeholder="تقييمك"></textarea>
+                                                    <div class="input-rating">
+                                                        <span>تقييمك:  </span>
+                                                        <div class="stars">
+                                                            <input id="star5" name="rating" value="5" type="radio"><label for="star5"></label>
+                                                            <input id="star4" name="rating" value="4" type="radio"><label for="star4"></label>
+                                                            <input id="star3" name="rating" value="3" type="radio"><label for="star3"></label>
+                                                            <input id="star2" name="rating" value="2" type="radio"><label for="star2"></label>
+                                                            <input id="star1" name="rating" value="1" type="radio"><label for="star1"></label>
+                                                        </div>
+                                                    </div>
+                                                    <button class="primary-btn">نشر</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- /Review Form -->
+                                    </div>
+                                </div>
+                                <!-- /tab3  -->
+                            </div>
+                            <!-- /product tab content  -->
+                        </div>
+                    </div>
+                    <!-- /product tab -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /SECTION -->
+
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+				
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			
+		</footer>
+		<!-- /FOOTER -->
+
+		<!-- jQuery Plugins -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
+
+        {% endblock content %}

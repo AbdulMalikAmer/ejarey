@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+{% block title %} E-jari {% endblock title %}
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+{% block content %}
+<!-- HEADER -->
+<header>
+
+
+	<!-- MAIN HEADER -->
+	<div id="header">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- LOGO -->
+				<div class="col-md-3">
+					<div class="header-logo">
+						<a href="index.html" class="logo">
+							<img src="./img/logoo.png" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- /LOGO -->
+
+				<!-- SEARCH BAR -->
+				<div class="col-md-6">
+					<div class="header-search">
+						<form>
+							<select class="input-select">
+								<option value="0">جميع الأقسام</option>
+								<option value="1">فنادق</option>
+								<option value="1">منتجعات</option>
+								<option value="1">استراحات</option>
+								<option value="1">شقق</option>
+								<option value="1">استوديو</option>
+							</select>
+							<input class="input" placeholder="ابحث هنا">
+							<button class="search-btn">بحث</button>
+						</form>
+					</div>
+				</div>
+				<!-- /SEARCH BAR -->
+
+				<!-- /MAIN HEADER -->
+</header>
+<!-- /HEADER -->
+
+<!-- NAVIGATION -->
+<nav id="navigation">
+	<!-- container -->
+	<div class="container">
+		<!-- responsive-nav -->
+		<div id="responsive-nav">
+			<!-- NAV -->
+			<ul class="main-nav nav navbar-nav">
+				<li><a data-toggle="index.html" href="{% url 'index' %}">الرئيسية</a></li>
+				<li><a data-toggle="{% url 'hotels' %}" href="{% url 'hotels' %}">فنادق</a></li>
+				<li><a data-toggle="resorts.html" href="{% url 'resorts' %}">منتجعات</a></li>
+				<li><a data-toggle="shalet.html" href="{% url 'shalet' %}">استراحات</a></li>
+				<li class="active"><a data-toggle="appartments.html" href="{% url 'appartments' %}">شقق</a></li>
+				<li><a data-toggle="studios.html" href="{% url 'studios' %}">استوديو</a></li>
+			</ul>
+			<!-- /NAV -->
+		</div>
+		<!-- /responsive-nav -->
+	</div>
+	<!-- /container -->
+</nav>
+<!-- /NAVIGATION -->
+
+<!-- SECTION -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- ASIDE -->
+			{% include "sidebar.html" %}
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /SECTION -->
+
+
+
+
+
+
+<!-- /aside Widget -->
+</div>
+<!-- /ASIDE -->
+
+<!-- STORE -->
+<div id="store" class="col-md-9">
+	<!-- store top filter -->
+	<div class="store-filter clearfix">
+
+
+	</div>
+	<!-- /store top filter -->
+
+	<!-- store products -->
+	<div class="row">
+		<!-- product -->
+		<div class="col-md-4 col-xs-6">
+			<div class="product">
+				<div class="product-img">
+					<img src="{% static 'img/shop03.jpg' %}" alt="">
+				</div>
+				<div class="product-body">
+					<p class="product-category">غرفة</p>
+					<h3 class="product-name"><a href="#">جناح رئاسي</a></h3>
+					<h4 class="product-price">500 دينار الليلة</h4>
+					<div class="product-rating">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /product -->
+
+
+
+
+		<!-- /store products -->
+
+		<!-- store bottom filter -->
+		<div class="store-filter clearfix">
+			<ul class="store-pagination">
+				<li class="active">1</li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+			</ul>
+		</div>
+		<!-- /store bottom filter -->
+	</div>
+	<!-- /STORE -->
+</div>
+<!-- /row -->
+</div>
+<!-- /container -->
+</div>
+<!-- /SECTION -->
+
+<!-- NEWSLETTER -->
+<div id="newsletter" class="section">
+	<!-- container -->
+	<div class="container">
+
+	</div>
+	<!-- /container -->
+</div>
+<!-- /NEWSLETTER -->
+
+<!-- FOOTER -->
+<footer id="footer">
+	<!-- top footer -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /top footer -->
+
+
+</footer>
+<!-- /FOOTER -->
+
+<!-- jQuery Plugins -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/main.js"></script>
+
+{% endblock content %}
