@@ -5,16 +5,16 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 class Ad(models.Model):
-    PROPERTY_TYPES = [
+    PROPERTY_TYPE_CHOICES = [
         ('room', 'غرفة'),
-        ('apartment', 'شقة'),
+       ('apartment', 'شقة'),
         ('studio', 'استوديو'),
         ('villa', 'فيلا'),
         ('resort', 'منتجع')
     ]
     
     # نوع العقار
-    property_type = models.CharField(max_length=20, choices=PROPERTY_TYPES)
+    property_type = models.CharField(max_length=20, choices=PROPERTY_TYPE_CHOICES)
 
     # عدد الغرف
     rooms = models.PositiveIntegerField()

@@ -16,12 +16,16 @@
             <p class="section-description">قدم بعض المعلومات الأساسية، مثل الموقع وعدد الغرف وعدد الضيوف.</p>
             
             <div class="property-types mb-3">
-                <button type="button" class="oval-btn">غرفة</button>
-                <button type="button" class="oval-btn">شقة</button>
-                <button type="button" class="oval-btn">استوديو</button>
-                <button type="button" class="oval-btn">استراحة</button>
-                <button type="button" class="oval-btn">منتجع</button>
+                <button type="button" class="oval-btn" onclick="setPropertyType('room')">غرفة</button>
+                <button type="button" class="oval-btn" onclick="setPropertyType('apartment')">شقة</button>
+                <button type="button" class="oval-btn" onclick="setPropertyType('studio')">استوديو</button>
+                <button type="button" class="oval-btn" onclick="setPropertyType('villa')">فيلا</button>
+                <button type="button" class="oval-btn" onclick="setPropertyType('resort')">منتجع</button>
+    
             </div>
+
+        <!-- حقل مخفي لتخزين نوع العقار -->
+        <input type="hidden" id="property_type" name="property_type" value="">
 
             <!-- ربط الحقول من النموذج -->
             <div class="filter-row">
@@ -88,10 +92,20 @@
         <button type="submit" class="btn btn-primary mt-4">نشر الإعلان</button>
     </form>
 
+    <script>
+        function setPropertyType(type) {
+            document.getElementById('property_type').value = type;
+        }
+    </script>
+
     <hr>
+
     <p class="text-muted">يرجى تعبئة جميع الحقول المطلوبة بدقة لضمان جودة الإعلان.</p>
 </div>
 {% endblock %}
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+
 </body>
 </html>

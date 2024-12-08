@@ -17,4 +17,4 @@ class signupform(UserCreationForm):
 class AdForm(forms.ModelForm):
     class Meta:
         model = Ad  # النموذج الذي يحتوي على الحقول
-        fields = ['rooms', 'bathrooms', 'adults', 'children', 'city', 'street', 'images', 'description', 'price']
+        fields = ['property_type','rooms', 'bathrooms', 'adults', 'children', 'city', 'street', 'images', 'description', 'price']

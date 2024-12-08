@@ -9,6 +9,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect
 from .forms import AdForm
+from .forms import Ad
 
 
 # Create your views here.
@@ -57,8 +58,9 @@ def resorts(request):
 def shalet(request):
     return render (request, 'shalet.html')
 
-def appartments(request):
-    return render (request, 'appartments.html')
+def appartments_view(request):
+    ads = Ad.objects.all()  #   جلب جميع الإعلانات شقق
+    return render(request, 'appartments.html', {'ads': ads})
 
 def studios(request):
     return render (request, 'studios.html')
