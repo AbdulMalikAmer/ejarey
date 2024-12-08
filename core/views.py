@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate , login , logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import render, redirect
+from .forms import AdForm
 
 
 # Create your views here.
@@ -63,7 +65,15 @@ def studios(request):
 
 
 def add_ad(request):
-    return render (request, 'add_ad.html')
+    if request.method == 'POST':
+        form = AdForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('index')  # استبدل 'home' برابط مناسب
+    else:
+        form = AdForm()
+
+    return render(request, 'ADD_AD.html', {'form': form})
 
 def ad_manage(request):
     return render (request, 'ad_manage.html')

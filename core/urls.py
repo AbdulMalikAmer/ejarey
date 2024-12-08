@@ -20,4 +20,9 @@ urlpatterns = [
     path('add_ad/', add_ad, name='add_ad'),
     path('ad_manage/', ad_manage, name='ad_manage'),
     path('notification/', notification, name='notification'),
+    path('add-ad/', views.add_ad, name='add_ad'),
 ]
+
+# إضافة إعدادات الملفات الإعلامية
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

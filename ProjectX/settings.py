@@ -137,3 +137,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Media files (Uploaded by users)
+MEDIA_URL = '/media/'  # الرابط الذي سيتم استخدامه للوصول إلى الملفات الإعلامية
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # المسار الفعلي لحفظ الملفات المرفوعة
